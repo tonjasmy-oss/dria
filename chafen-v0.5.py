@@ -17,8 +17,8 @@ from typing import Dict, Tuple, List, Optional, Any
 # ======== 可配置项 ========
 # 建议用环境变量传入，或直接填常量
 DINGTALK_WEBHOOK = os.getenv("DINGTALK_WEBHOOK",
-                             "https://oapi.dingtalk.com/robot/send?access_token=d0c5d70533c293c1b9d764ffe9057e4c9c0ca88775508d8ada6d18c2a320a7fd")
-DINGTALK_SECRET = os.getenv("DINGTALK_SECRET", "SECe6c9b7d8015db8058a7fe90f8d7f31067aa9a131e9e90208e6d0994ba6d89827")
+                             "https://oapi.dingtalk.com/robot/send?access_token=**************")
+DINGTALK_SECRET = os.getenv("DINGTALK_SECRET", "*************")
 SERVER_NAME = "dria积分播报"
 DRIA_API_KEY = os.getenv("DRIA_API_KEY", "YOUR_DK_API_KEY")
 
@@ -506,4 +506,5 @@ if __name__ == "__main__":
             mins, secs = divmod(rem, 60)
             print(f"\r⏳ 剩余时间: {hrs:02d}:{mins:02d}:{secs:02d}", end="", flush=True)
             time.sleep(1)
+
         print("\n⏰ 开始新一轮查询！")
